@@ -10,6 +10,10 @@ class InstagramController {
         $this->model = new HomeModel();
         $this->view = new HomeView();
     }
+
+    function showLoginORRegister() {
+        $this->view->showLoginORRegister();
+    }
     
     function showHome(){
         $this->view->showHome();

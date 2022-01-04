@@ -7,6 +7,10 @@ class HomeView {
     function __construct() {
         $this->smarty = new Smarty();
     }
+    function showLoginORRegister() {
+        $this->smarty->display('templates/showLoginORRegister.tpl');
+    }
+
     function showHome() {
         $this->smarty->display('templates/home.tpl');
     }

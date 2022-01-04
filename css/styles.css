@@ -1,0 +1,85 @@
+body {
+    background-color:rgb(248, 245, 245);
+}
+.nav {
+    border-bottom:solid 1px rgb(204, 203, 203);
+    background-color:white;
+}
+article{
+    display:flex;   
+    margin-top: 5%;
+}
+.img-default{
+    margin-left:2%;
+}
+.img-showLoginORRegister{
+width:100%;
+}
+.usuarioOcontraseña {
+    text-align:center;
+    padding-top: 3%;
+    border: solid 1px rgb(226, 223, 223);
+    background-color:white;
+    width:25%;
+    display:block;
+    margin-left:2%;
+}
+.usuarioOcontraseña div input {
+    margin-top:3%;
+    background-color:rgb(247, 244, 244);
+    border: solid 1px rgb(226, 223, 223);
+    border-radius: 1%;
+}
+.userycontraseña {
+    margin-top: 30%;
+}
+.instagramTitulo {
+    font-size: 3rem;
+    font-style:oblique;
+}
+.iniciarSesion {
+    border-radius: 8%;
+    color: white;
+    background-color:rgb(125, 213, 243);
+    margin-top:5%;
+    border: solid 0.1px rgb(252, 252, 252);
+    width: 55%;
+}
+.noTenesCuenta {
+    margin-top: 5%;
+}
+
+/* REGISTRO */
+.registro {
+    text-align:center;
+    margin-top: 5%;
+    border: solid 1px rgb(226, 223, 223);
+    background-color:white;
+    display: inline-block;
+    margin-left: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left:3%;
+    padding-right: 3%;
+    height: 600px;
+}
+.registro h2 {
+    font-size: 3rem;
+}
+.msg-registrate {
+    font-size: 1.5rem;
+    color: gray;
+    font-weight: bold;
+}
+.formRegistro div input {
+    margin-top:3%;
+    width: 55%;
+    background-color:rgb(247, 244, 244);
+    border: solid 1px rgb(226, 223, 223);
+    border-radius: 1%;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(104, 193, 223);
+}
