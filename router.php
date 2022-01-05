@@ -9,8 +9,10 @@ define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"]
 $router = new Router();
 
 $router->setDefaultRoute("InstagramController","showLoginORRegister");
-$router->addRoute('home', 'GET', 'InstagramController', 'showHome');
 $router->addRoute('registrate', 'GET', 'UserController', 'register');
+$router->addRoute('login', 'POST', 'UserController', 'UserRegister');
+$router->addRoute('verify', 'POST', 'UserController', 'verifyLogin');
+$router->addRoute('home', 'GET', 'InstagramController', 'showHome');
 
 
 

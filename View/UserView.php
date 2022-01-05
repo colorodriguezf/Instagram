@@ -11,4 +11,10 @@ class UserView  {
     function showFormRegister() {
         $this->smarty->display('templates/formRegister.tpl');
     }
+    function showLoginLocation() {
+        header("Location: " . BASE_URL . "");
+    }
+    function showHomeLocation() {
+        header("Location: " . BASE_URL . "home");
+    }
 }

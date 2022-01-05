@@ -45,6 +45,10 @@ width:100%;
     border: solid 0.1px rgb(252, 252, 252);
     width: 55%;
 }
+.errorLogin {
+    margin-left: 20%;
+    width:60%;
+}
 .noTenesCuenta {
     margin-top: 5%;
 }

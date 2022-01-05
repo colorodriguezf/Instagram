@@ -2,25 +2,28 @@
 <div class="registro">
     <h2>Instagram</h2>
     <p class="msg-registrate">Regístrate para ver fotos y videos de tus amigos.</p>
-    <div class="formRegistro">
+    <form class="formRegistro" action="login" method="POST" enctype="multipart/form-data">
                 <div>
-                    <input type="text" placeholder="Correo electronico">
+                    <input type="text" placeholder="Correo electronico" name="correo" required>
                 </div>
                 <div>
-                    <input type="text" placeholder="Nombre de usuario">
+                    <input type="text" placeholder="Nombre de usuario" name="nombre_usuario" required>
                 </div>
                 <div>
-                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Nombre" name="nombre" required>
                 </div>
                 <div>
-                    <input type="text" placeholder="Apellido">
+                    <input type="text" placeholder="Apellido" name="apellido" required>
                 </div>
                 <div>
-                    <input type="text" placeholder="Contraseña">
+                    <input type="password" placeholder="Contraseña" name="password" required>
                 </div>
-                <button class=iniciarSesion>Registrarme </button>
+                <div>
+                    <input type="file" name="input_name" id="imageToUpload" name="foto_perfil" required>
+                </div>
+                <button type="submit"class=iniciarSesion>Registrarme </button>
                 <div class="noTenesCuenta">
                 <p>¿Ya tienes cuenta? <a href="">Iniciar Sesion</a></p>
-        </div>
+        </form>
     </div>
 </div>
