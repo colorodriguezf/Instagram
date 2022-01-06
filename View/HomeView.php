@@ -12,9 +12,27 @@ class HomeView {
         $this->smarty->display('templates/showLoginORRegister.tpl');
     }
 
-    function showHome($foto_perfil="") {
+    function showHome($foto_perfil="", $nombre_usuario="") {
         $this->smarty->assign('foto_perfil', $foto_perfil);
+        $this->smarty->assign('nombre_usuario', $nombre_usuario);
         $this->smarty->display('templates/home.tpl');
+    }
+
+    function viewProfile($foto_perfil="", $nombre_usuario="", $usuario, $cantPublicaciones, $posteos) {
+        $this->smarty->assign('foto_perfil', $foto_perfil);
+        $this->smarty->assign('nombre_usuario', $nombre_usuario);
+        $this->smarty->assign('usuario', $usuario);
+        $this->smarty->assign('publicaciones', $cantPublicaciones);
+        $this->smarty->assign('posteos', $posteos);
+        $this->smarty->display('templates/profile.tpl');
+    }
+
+    function formCreatePost() {
+        $this->smarty->display('templates/formCreatePost.tpl');
+    }
+
+    function showHomeLocation() {
+        header("Location: " . BASE_URL . "home");
     }
     
 }

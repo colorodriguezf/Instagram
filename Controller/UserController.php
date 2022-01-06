@@ -59,5 +59,11 @@ class UserController {
       $this->homeView->showLoginORRegister("complete todos los campos");
     }
   }
+
+  function logout() {
+    session_start();
+    session_destroy();
+    $this->homeView->showLoginORRegister();
+  }
   
 }

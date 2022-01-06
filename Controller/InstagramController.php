@@ -18,10 +18,36 @@ class InstagramController {
         $this->view->showLoginORRegister();
     }
     
-    function showHome(){
+    function showHome($params = null){
         $logueado = $this->authHelper->checkLogedIn();
         if ($logueado) {
-            $this->view->showHome($_SESSION['foto_perfil']);
+            $this->view->showHome($_SESSION['foto_perfil'], $_SESSION['nombre_usuario']);
+        }
+    }
+
+    function profile($params = null) {
+        $nombre_usuario = $params[':NOMBRE_USUARIO'];
+        $logueado = $this->authHelper->checkLogedIn();
+        if($logueado) {
+            $existe = $this->model->checkUser($nombre_usuario);
+            $cantPublicaciones = $this->model->cantPublicaciones($existe->user_id);
+            $posteos = $this->model->todosLosPosteos($existe->user_id);
+            if ($existe) {
+                $this->view->viewProfile($_SESSION['foto_perfil'], $_SESSION['nombre_usuario'], $existe, $cantPublicaciones, $posteos);
+            }
+            else {
+                $this->view->showHomeLocation();
+            }
+        }
+    }
+
+    function createPost($params = null) {
+        $logueado = $this->authHelper->checkLogedIn();
+        if($logueado) {
+            $this->view->formCreatePost();
+        }
+        else {
+            $this->view->showLoginORRegister();
         }
     }
 }
