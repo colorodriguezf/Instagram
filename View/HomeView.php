@@ -12,7 +12,8 @@ class HomeView {
         $this->smarty->display('templates/showLoginORRegister.tpl');
     }
 
-    function showHome() {
+    function showHome($foto_perfil="") {
+        $this->smarty->assign('foto_perfil', $foto_perfil);
         $this->smarty->display('templates/home.tpl');
     }
     

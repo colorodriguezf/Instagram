@@ -51,13 +51,13 @@ class UserController {
       if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
         $this->view->showHomeLocation();
       }
-     else {
-      $this->homeView->showLoginORRegister("usuario o contraseña incorrectos");
+      else {
+        $this->homeView->showLoginORRegister("usuario o contraseña incorrectos");
       }
     } 
     else {
       $this->homeView->showLoginORRegister("complete todos los campos");
-      }
+    }
   }
-
+  
 }

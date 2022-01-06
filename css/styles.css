@@ -34,7 +34,7 @@ width:100%;
     margin-top: 30%;
 }
 .instagramTitulo {
-    font-size: 3rem;
+    font-size: 4rem;
     font-style:oblique;
 }
 .iniciarSesion {
@@ -87,3 +87,62 @@ a {
     font-weight: bold;
     color: rgb(104, 193, 223);
 }
+
+/* HOME */
+.home {
+    color: #000;
+}
+.home:active {
+    color: gray;
+}
+.activity {
+    color: #000;
+}
+.create {
+    color: #000;
+}
+.create:active {
+    background-color: #000;
+}
+.foto_perfil{
+    width: 100%;
+    border-radius:100%;
+    height: 30px;
+}
+.instagram {
+    color: #000;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+.instagram:hover{
+    color: #000;
+}
+.ulPerfil {
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.salir {
+    margin-top: 10%;
+}
+
+.contenedorNav {
+    margin-left:40%;
+    display: flex;
+}
+/* Menu desplegable */
+
+    ul ul {
+    list-style: none;
+    display: none;
+    }   
+        li:active ul {
+            padding:10px;
+            margin-top: 2px;
+            display: block;  
+            position: absolute; 
+            background-color:white;    
+        }
+       li ul div li:hover {
+            background-color:rgb(212, 214, 212); 
+        }
