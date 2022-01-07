@@ -151,13 +151,49 @@ a {
     margin-top: 0.9%;
     display: flex;
 }
+
+
+.contenedorImagen-Nombre-Posteo {
+    border: solid 0.5px rgb(218, 218, 218);
+    background-color:rgb(255, 255, 255);
+    margin-left: 25%;
+    width: 50%;
+    margin-top:2%;
+}
+.postFotoPerfil {
+    width:7%;
+    margin-left:3%;
+    border-radius: 100%;
+}
+a div {
+    margin-top:2%;
+}
+.imgPosteo {
+    width: 100%;
+}
+.contenedorImagen-Nombre-Posteo div h5 {
+    font-size: 1.2rem;
+    margin-left: 15%;    
+}
+.ubicacion {
+    margin-left: 14.5%;
+    margin-top: -1.5%;
+    color: rgba(var(--i1d,38,38,38),1);
+}
+div a h5 {
+    color: #262626;
+    margin-top:-6.2%;
+}
+div a h5:hover {
+    text-decoration: underline;
+}
 /* Menu desplegable */
 
     ul ul {
     list-style: none;
     display: none;
     }   
-        li:active ul {
+        li:hover ul {
             padding:10px;
             margin-top: 2px;
             display: block;  
@@ -177,7 +213,6 @@ a {
         .salir {
            display:flex;
            justify-content: flex-start;
-          
            padding-left: 2%;
         }
         .salir li {
