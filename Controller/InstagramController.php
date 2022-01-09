@@ -21,6 +21,7 @@ class InstagramController {
     function showHome(){
         $logueado = $this->authHelper->checkLogedIn();
         $posteos= $this->model->todosLosPosteos();
+        $fecha = date("Y-m-d H:i");
         if ($logueado) {
             $this->view->showHome($_SESSION['foto_perfil'], $_SESSION['nombre_usuario'], $posteos);
         }

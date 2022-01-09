@@ -193,6 +193,100 @@ div a h5:hover {
     text-decoration: underline;
 }
 /* COMENTARIOS */
+
+.accionesComentarios {
+    margin-top: 2.5%;
+    margin-left: 3%;
+}
+.fa-bookmark{
+    size:50px;
+}
+.guardar {
+    margin-left: 68%;
+}
+
+span button {
+    margin-right:1.8%;
+    margin-bottom: 1%;
+    border:none;
+    background-color: white;
+}
+span button:hover {
+    color: gray;
+}
+.borderComentarios {
+    border-top: 1px solid rgb(218, 218, 218);
+    height:60px;
+}
+.textarea {
+    appearance:auto;
+    background-attachment:scroll;
+    background-clip:border-box;
+    background-color:rgba(0, 0, 0, 0);
+    background-image:none;
+    background-origin:padding-box;
+    background-position-x:0px;
+    background-position-y:0px;
+    background-size:auto;
+    border-bottom-color:rgb(38, 38, 38);
+    border-bottom-style:none;
+    border-bottom-width:0px;
+    border-image-outset:0;
+    border-image-repeat:stretch;
+    border-image-slice:100%;
+    border-image-source:none;
+    border-image-width:1;
+    border-left-color:rgb(38, 38, 38);
+    border-left-style:none;
+    border-left-width:0px;
+    border-right-color:rgb(38, 38, 38);
+    border-right-style:none;
+    border-right-width:0px;
+    border-top-color:gb(38, 38, 38);
+    border-top-style:none;
+    border-top-width:0px;
+    color:rgb(38, 38, 38);
+    column-count:auto;
+    cursor:text;
+    display:flex;
+    flex-grow:1;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:14px;
+    font-stretch:100%;
+    font-style:normal;
+    font-variant-caps:normal;
+    font-variant-east-asian:normal;
+    font-variant-ligatures:normal;
+    font-variant-numeric:normal;
+    font-weight:400;
+    height:18px;
+    letter-spacing:normal;
+    line-height:100%;
+    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:3%;
+    max-height:80px;
+    outline-color:rgb(38, 38, 38);
+    outline-style:none;
+    outline-width:0px;
+    overflow-wrap:break-word;
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    pointer-events:auto;
+    resize:none;
+    text-align:start;
+    text-indent:0px;
+    text-rendering:auto;
+    text-shadow:none;
+    text-size-adjust:100%;
+    text-transform:none;
+    white-space:pre-wrap;
+    width:100%;
+    
+  }
 .listaComentarios {
 list-style: none;
 margin-bottom: 2%;
