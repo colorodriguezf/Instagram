@@ -153,12 +153,17 @@ a {
 }
 
 
-.contenedorImagen-Nombre-Posteo {
+.contenedorImagen-Nombre-Posteo, .contenedorVueComentarios {
     border: solid 0.5px rgb(218, 218, 218);
     background-color:rgb(255, 255, 255);
     margin-left: 25%;
     width: 50%;
+}
+.contenedorImagen-Nombre-Posteo {
     margin-top:2%;
+}
+.contenedorVueComentarios {
+    margin-bottom:2%;
 }
 .postFotoPerfil {
     width:7%;
@@ -187,6 +192,31 @@ div a h5 {
 div a h5:hover {
     text-decoration: underline;
 }
+/* COMENTARIOS */
+.listaComentarios {
+list-style: none;
+margin-bottom: 2%;
+}
+.contenedorComentarios {
+    margin-bottom:2%;
+}
+.comentario {
+    display: flex;
+    height:30px;
+}
+.h2Comentario {
+    color: black;
+    font-size: 1.2rem;
+}
+.h2Comentario:hover {
+    text-decoration: underline;    
+}
+.pComentario {
+  margin-top: 0%;
+  margin-left: 2%;
+}
+
+
 /* Menu desplegable */
 
     ul ul {
@@ -224,6 +254,13 @@ div a h5:hover {
         .Alogout:hover {
             color: black;
         }
+
+
+
+
+
+
+
 
 
         /* PERFIL */

@@ -5,6 +5,7 @@
 
 <div>
     {foreach from=$posteos item=$post}
+        <input id="id_post" data-id={$post->post_id} value={$post->post_id} hidden />
             <div class="contenedorImagen-Nombre-Posteo">   
                  <a href="{$post->name}">
                     <div>   
@@ -21,8 +22,11 @@
                     <img class="imgPosteo" src='{$post->media}'/>
                 </div>
             </div>
+            <div class="contenedorVueComentarios">
+                {include file='templates/vue/comments.tpl'}
+            </div>
     {{/foreach}}
-
-</div>
-
-{include file='templates/usoComun/footer.tpl'}
+    </div>
+    
+    <script src="js/app.js"></script>
+    {include file='templates/usoComun/footer.tpl'}
