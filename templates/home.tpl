@@ -3,10 +3,51 @@
 {include file='templates/usoComun/nav.tpl'}
 
 
-<div class="contenedorHome">
+
     <div class="historias">
-        <p>A</p>
+            <div class="historias-container">
+                <button class="historia">
+                        <div class="profile">
+                            <img src="img\fotoPerfil\61d60957ba164.jpg"/> 
+                        </div>
+                        <div class="usernameHistorias">
+                            <p>USUARIO1</p>
+                        </div>
+                    </button>
+                    <button class="historia">
+                    <div class="profile empty">
+                        <img src="img\fotoPerfil\61d60957ba164.jpg"/> 
+                    </div>
+                    <div class="usernameHistorias">
+                        <p>Nombre usuario</p>
+                    </div>
+                </button>
+                <button class="historia">
+                <div class="profile">
+                    <img src="img\fotoPerfil\61d60957ba164.jpg"/> 
+                </div>
+                <div class="usernameHistorias">
+                    <p>JUAN</p>
+                </div>
+            </button>
+            <button class="historia">
+            <div class="profile">
+                <img src="img\fotoPerfil\61d60957ba164.jpg"/> 
+            </div>
+            <div class="usernameHistorias">
+                <p>Nombre usuario</p>
+            </div>
+        </button>
+                                                        
+             </div>
+               
+           
     </div>
+
+
+
+
+<div class="contenedorHome">
     {foreach from=$posteos item=$post}
         <input id="id_post" data-id={$post->post_id} value={$post->post_id} hidden />
             <div class="contenedorImagen-Nombre-Posteo">   

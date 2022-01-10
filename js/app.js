@@ -27,3 +27,21 @@ async function getComments(){
     }
 
 }
+
+
+
+
+
+
+
+// HISTORIAS:
+let stories = document.querySelectorAll('.historia');
+
+stories.forEach(story => {
+    story.addEventListener('click', e=> {
+        stories.forEach(s => {s.classList.remove('active')});
+        if (story.querySelector('.profile').classList.contains('empty')) 
+            return flase;
+        story.classList.add('active');
+    });
+});
