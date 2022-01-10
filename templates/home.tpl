@@ -3,11 +3,14 @@
 {include file='templates/usoComun/nav.tpl'}
 
 
-<div>
+<div class="contenedorHome">
+    <div class="historias">
+        <p>A</p>
+    </div>
     {foreach from=$posteos item=$post}
         <input id="id_post" data-id={$post->post_id} value={$post->post_id} hidden />
             <div class="contenedorImagen-Nombre-Posteo">   
-                 <a href="{$post->name}">
+                 <a href="{$post->username}">
                     <div>   
                         <img class="postFotoPerfil" src="{$post->profilePhoto}"/>
                         <h5>{$post->username}</h5>
@@ -25,42 +28,57 @@
             <div class="contenedorVueComentarios">
                 <div class="accionesComentarios">
                         <span>
-                            <button> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                                    </svg>
+                            <button> <svg aria-label="Me gusta"  color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
                             </button>     
                         </span>                    
                         <span>
-                                <button>   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="currentColor" class="bi bi-chat" viewBox="0 1 16 16">
-                                                <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
-                                            </svg>
+                                <button>   <svg aria-label="Comentar" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
                                 </button>   
                         </span>
                         <span> 
                             <button>  
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                                    <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-                                </svg>   
-                            </button>
+                            <svg aria-label="Compartir publicación" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>                            </button>
                         </span>
                         <span class="guardar">
                             <button> 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
-                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                                </svg>
-                            </button>     
+                            <svg aria-label="Guardar"  color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>                            </button>     
                         </span>   
                 </div>
                 {include file='templates/vue/comments.tpl'}
                 <div class="borderComentarios">
-                        <form method="POST" id="formComentar">
-                        <textarea  class="textarea" placeholder="Agrega un comentario..." color=black;>
-                        </textarea>
+                        <form class="formComentarios" method="POST" id="formComentar">
+                        <input type="text" class="textarea" placeholder="Agrega un comentario..." color=black;>
+                        <button class="btn-comentar">Publicar</button>
 
                         </form>
                 </div>
             </div>
     {{/foreach}}
+    </div>
+    <div class="SugerenciasDerecha">
+        <div class="profile-card">
+            <div class="profile-pic">
+               <img class="img-sugerencia" src="img\fotoPerfil\61d609b6da901.jpg"/>
+            </div>
+            <div>
+            <p class="usernameDerecha">{$nombre_usuario}</p>
+            <p class="sub-text">{$nickname}</p>
+            </div>
+                <button class="cambiarCuenta">Cambiar</button>
+            </div>
+                            <p class="textoSugerencias">Sugerencias para ti</p>
+                            <div class="profile-card">
+            <div class="profile-pic">  
+               <img class="img-sugerencia" src="img\fotoPerfil\61d619929c8f4.jpg"/>
+            </div>
+            <div>
+            <p class="usernameDerecha">Juan</p>
+            <p class="sub-text">Juan perez</p>
+            </div>
+                <button class="cambiarCuenta">Seguir</button>
+            </div>
+    
+
     </div>
     
     <script src="js/app.js"></script>

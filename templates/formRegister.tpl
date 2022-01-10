@@ -16,6 +16,9 @@
                     <input type="text" placeholder="Apellido" name="apellido" required>
                 </div>
                 <div>
+                    <input type="text" placeholder="Apodo" name="nickname" required>
+                </div>
+                <div>
                     <input type="password" placeholder="Contraseña" name="password" required>
                 </div>
                 <div>

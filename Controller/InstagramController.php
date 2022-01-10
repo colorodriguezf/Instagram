@@ -23,7 +23,7 @@ class InstagramController {
         $posteos= $this->model->todosLosPosteos();
         $fecha = date("Y-m-d H:i");
         if ($logueado) {
-            $this->view->showHome($_SESSION['foto_perfil'], $_SESSION['nombre_usuario'], $posteos);
+            $this->view->showHome($_SESSION['foto_perfil'], $_SESSION['nombre_usuario'],$_SESSION['nickname'], $posteos);
         }
         else {
             $this->view->showLoginLocation();

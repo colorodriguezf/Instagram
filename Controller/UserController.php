@@ -19,18 +19,19 @@ class UserController {
   }
   
   function userRegister(){
-    if (!empty($_POST['correo']) && !empty($_POST['nombre_usuario']) && !empty($_POST['nombre']) && 
+    if (!empty($_POST['correo']) && !empty($_POST['nickname']) && !empty($_POST['nombre_usuario']) && !empty($_POST['nombre']) && 
     !empty($_POST['apellido']) && !empty($_POST['password']) && !empty($_FILES['input_name']['type'])) {
                 if ($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || 
                 $_FILES['input_name']['type'] == "image/png") {
                     $nombre = $_POST['nombre'];
                     $apellido = $_POST['apellido'];
                     $nombre_usuario = $_POST['nombre_usuario'];
+                    $nickname=$_POST['nickname'];
                     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
                     $correo = $_POST['correo'];
                     $foto_perfil = $_FILES['input_name']['tmp_name'];
               }
-              $this->model->createUser($nombre, $apellido, $nombre_usuario, $password, $correo, $foto_perfil);
+              $this->model->createUser($nombre, $apellido, $nombre_usuario, $password, $correo, $foto_perfil, $nickname);
     }
     $this->view->showLoginLocation();
   }
@@ -47,6 +48,7 @@ class UserController {
         $_SESSION['correo']= $user->correo;
         $_SESSION['nombre_usuario']=$user->username;
         $_SESSION['foto_perfil']=$user->profilePhoto;
+        $_SESSION['nickname']=$user->nickname;
       }
       if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
         $this->view->showHomeLocation();
