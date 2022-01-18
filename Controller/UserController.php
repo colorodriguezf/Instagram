@@ -49,6 +49,7 @@ class UserController {
         $_SESSION['nombre_usuario']=$user->username;
         $_SESSION['foto_perfil']=$user->profilePhoto;
         $_SESSION['nickname']=$user->nickname;
+        $_SESSION['user_id']=$user->user_id;
       }
       if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
         $this->view->showHomeLocation();

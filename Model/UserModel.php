@@ -10,7 +10,7 @@ class UserModel  {
         $pathImg = null;
         if ($foto_perfil) {
             $pathImg = $this->uploadImage($foto_perfil);
-            $sentencia = $this->db->prepare("INSERT INTO users(name, surname, username, pasword, correo, profilePhoto, nickname) VALUES(?,?,?,?,?,?,))");
+            $sentencia = $this->db->prepare("INSERT INTO users(name, surname, username, pasword, correo, profilePhoto, nickname) VALUES(?,?,?,?,?,?,?)");
             $sentencia->execute(array($nombre, $apellido, $nombre_usuario, $password, $correo, $pathImg, $nickname));
         }
     }

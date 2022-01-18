@@ -49,7 +49,6 @@
         
     </div>
     {foreach from=$posteos item=$post}
-        <input id="id_post" data-id={$post->post_id} value={$post->post_id} hidden />
             <div class="contenedorImagen-Nombre-Posteo">   
                  <a href="{$post->username}">
                     <div>   
@@ -84,17 +83,36 @@
                                 <svg aria-label="Guardar"  color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>                            </button>     
                             </span>   
                     </div>
-                    {include file='templates/vue/comments.tpl'}
+                    <div class="tittle">
+                        <div class="comentario-usuario"><a href="{$post->username}" class="">{$post->username}</a></div>
+                        <div class="comentario-comentario">{$post->title}</div>
+                    </div>
+                   {foreach from=$comentarios item=$comentario}
+                        {if $comentario->id_post_fk == $post->post_id}
+                            <div class="contenedorComentarios">                                    
+                                        <div class="comentario-usuario"> <a href="{$comentario->user}">{$comentario->user} </a> </div>                           
+                                        <div class="comentario-comentario">{$comentario->comment}</div>
+                            </div>
+                        {/if}
+                  {/foreach}
+
+                    
+                
                     <div class="borderComentarios">
-                            <form class="formComentarios" method="POST" id="formComentar">
-                            <input type="text" class="textarea" placeholder="Agrega un comentario..." color=black;>
-                            <button class="btn-comentar">Publicar</button>
-    
+                            <form class="formComentarios" method="POST" class="formComentario" id="formComentario" data-id={$post->post_id} 
+                            data-img={$foto_perfil} data-user={$nombre_usuario} data-fecha={$fecha}>
+                                <input id="comentario{$post->post_id}" type="text" class="textarea" placeholder="Agrega un comentario..." color=black;>
+                                <button type="button"  class="btn-comentar" value={$post->post_id} data-img={$foto_perfil}>Publicar</button>
                             </form>
                     </div>
                 </div>
             </div>
-    {{/foreach}}
+    {/foreach}
+
+
+
+
+
     <div class="SugerenciasDerecha">
         <div class="profile-card">
             <div class="profile-pic">
@@ -149,34 +167,7 @@
             </div>
                 <button class="cambiarCuenta">Seguir</button>
             </div>
-            <div class="profile-card">
-            <div class="profile-pic">  
-               <img class="img-sugerencia" src="img\fotoPerfil\61d619929c8f4.jpg"/>
-            </div>
-            <div>
-                <div>
-                    <p class="usernameDerecha">Juan</p>
-                <div>
-                </div>
-                    <p class="sub-text">Juan perez</p>
-                </div>
-            </div>
-                <button class="cambiarCuenta">Seguir</button>
-            </div>
-            <div class="profile-card">
-            <div class="profile-pic">  
-               <img class="img-sugerencia" src="img\fotoPerfil\61d619929c8f4.jpg"/>
-            </div>
-            <div>
-                <div>
-                    <p class="usernameDerecha">Juan</p>
-                <div>
-                </div>
-                    <p class="sub-text">Juan perez</p>
-                </div>
-            </div>
-                <button class="cambiarCuenta">Seguir</button>
-            </div>
+            
         </div>
     </div>
     

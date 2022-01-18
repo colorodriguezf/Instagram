@@ -19,6 +19,34 @@ function getComments($id) {
     return $comments;
 }
 
+function insertarComentario($id_post_fk, $user, $comment, $profilePhoto, $date) {
+    $sentencia = $this->db->prepare("INSERT INTO comments(id_post_fk, user, comment, profilePhoto, date) VALUES(?,?,?,?,?)");
+    $sentencia->execute(array($id_post_fk, $user, $comment, $profilePhoto ,$date));
+    return $this->db->lastInsertId();
+}
+
+
+function checkUser($nombre_usuario) {
+    $sentencia = $this->db->prepare('SELECT * FROM users WHERE username=?');
+    $sentencia->execute([$nombre_usuario]);
+    $user= $sentencia->fetch(PDO::FETCH_OBJ);
+    return $user;
+}
+function sigoAUsuario($id){
+$sentencia = $this->db->prepare("SELECT * FROM seguidos WHERE usuario_fk=?");
+$sentencia->execute([$id]);
+$usuario = $sentencia->fetchAll(PDO::FETCH_OBJ);
+return $usuario;
+}
+function seguir($miUsuario, $sigoA, $fotoPerfil) {
+    $sentencia=$this->db->prepare("INSERT INTO seguidos(usaurio_fk, sigo, fotoPerfil) VALUES(?, ?, ))");
+    $sentencia->execute(array($miUsuario, $sigoA, $fotoPerfil));
+}
+function dejarDeSeguir($miUsuario, $dejoDeSeguirA) {
+    $sentencia=$this->db->prepare("DELETE FROM seguidos(usaurio_fk, sigo) VALUES(?, ?)");
+    $sentencia->execute(array($miUsuario, $dejoDeSeguirA));
+}
+
 
 
 }

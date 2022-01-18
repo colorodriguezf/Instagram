@@ -8,10 +8,16 @@ class HomeModel {
     }
 
     function todosLosPosteos() {
-        $sentencia= $this->db->prepare('SELECT * FROM posts JOIN users WHERE posts.user_id = users.user_id');
+        $sentencia= $this->db->prepare('SELECT * FROM posts JOIN users ON posts.user_id = users.user_id ');
         $sentencia->execute();
         $posteos = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $posteos;
+    }
+    function comentarios() {
+        $sentencia= $this->db->prepare('SELECT * FROM comments');
+        $sentencia->execute();
+        $comentarios = $sentencia->fetchAll(PDO::FETCH_OBJ);
+        return $comentarios;
     }
 
     function checkUser($nombre_usuario) {
@@ -33,5 +39,12 @@ class HomeModel {
         $sentencia->execute([$nombre_usuario]);
         $posts= $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $posts;
+    }
+
+    function misSeguidores($miUsuario) {
+        $sentencia= $this->db->prepare("SELECT * from seguidores WHERE usuario_fk=? ");
+        $sentencia->execute(array($miUsuario));
+        $seguidores = $sentencia->fetchAll(PDO::FETCH_OBJ);
+        return $seguidores;
     }
 }
