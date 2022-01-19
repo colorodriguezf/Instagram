@@ -87,8 +87,17 @@
                         <div class="comentario-usuario"><a href="{$post->username}" class="">{$post->username}</a></div>
                         <div class="comentario-comentario">{$post->title}</div>
                     </div>
-                   {foreach from=$comentarios item=$comentario}
+                    {foreach from=$comentarios item=$comentario}
+                        {if $comentario->id_post_fk == $post->post_id && $comentario->id_post_fk!=null}
+                            <div class="verLosComentarios">
+                            <p> Ver todos los comentarios</p>
+                            </div>
+                            {break}
+                        {/if}
+                    {/foreach}
+                    {foreach from=$comentarios item=$comentario}
                         {if $comentario->id_post_fk == $post->post_id}
+                            
                             <div class="contenedorComentarios">                                    
                                         <div class="comentario-usuario"> <a href="{$comentario->user}">{$comentario->user} </a> </div>                           
                                         <div class="comentario-comentario">{$comentario->comment}</div>

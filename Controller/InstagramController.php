@@ -41,10 +41,10 @@ class InstagramController {
         if ($nombre_usuario!=null) {
             if($logueado) {
                 $existe = $this->model->checkUser($nombre_usuario);
-                $cantPublicaciones = $this->model->cantPublicaciones($existe->user_id);
-                $posteos = $this->model->todosLosPosteosDe($existe->user_id);
                 if ($existe) {
-                    $misSeguidos=$this->apiModel->sigoAUsuario($_SESSION['user_id']);
+                    $cantPublicaciones = $this->model->cantPublicaciones($existe->user_id);
+                    $posteos = $this->model->todosLosPosteosDe($existe->user_id);
+                    $misSeguidos=$this->apiModel->sigoAUsuario($existe->user_id);
                     $seguidos = count($misSeguidos);
                     $id_usuario = $existe->user_id;
                     $misSeguidores =$this->model->misSeguidores($id_usuario);

@@ -20,30 +20,33 @@
 
             <div class="cabezera2">
                 <button> <span>{$publicaciones} </span>publicaciones</button>            
-                <button type="button" data-toggle="modal" data-target="#exampleModalLong"> <span>{$seguidores}</span> seguidores </button>
+                <button type="button" data-toggle="modal" data-target="#exampleModalLongSeguidores"> <span>{$seguidores}</span> seguidores </button>
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal fade" id="exampleModalLongSeguidores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLongTitle">Seguidores</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <svg aria-label="Cerrar" class="_8-yf5 modal-x" color="#000" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="21" x2="3" y1="3" y2="21"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="21" x2="3" y1="21" y2="3"></line></svg>
                                             </button>
                                         </div>
                                         <div class="modal-body">
+                                        {if $misSeguidores==null}
+                                            <p>Todavia no tienes seguidores</p>
                                             {foreach from=$misSeguidores item=$seguidor}
                                                 <ul>
                                                     <li><a href="{$seguidor->seguidor}" class="">{$seguidor->seguidor}</a></li>
                                                 </ul>
                                             {/foreach}
+                                        {/if}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                <button type="button" data-toggle="modal" data-target="#exampleModalLong"> <span>{$seguidos}  </span> seguidos </button>
+                <button type="button" data-toggle="modal" data-target="#exampleModalLongSeguidos"> <span>{$seguidos}  </span> seguidoss </button>
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal fade" id="exampleModalLongSeguidos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -53,21 +56,25 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                {foreach from=$misSeguidos item=$sigo}
+                            {if $misSeguidos==null}
+                                <p>Todavia no sigues a nadie</p>
+                            {else}
+                                {foreach from=$misSeguidos item=$siguiendo}
                                     <ul>
-                                        <li><a href="{$sigo->sigo}" class="">{$sigo->sigo}</a></li>
+                                        <li><a href="{$siguiendo->sigo}" class="">{$siguiendo->sigo}</a>                                        </li>
                                     </ul>
-                                {/foreach}
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
+                                    {/foreach}
+                            {/if}
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
             <div class="cabezera3">
                  <h2>{$usuario->nickname}</h2>
                  <p>Aca irian datos</p>
