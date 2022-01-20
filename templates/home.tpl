@@ -54,16 +54,74 @@
                     <div>   
                         <img class="postFotoPerfil" src="{$post->profilePhoto}"/>
                         <h5>{$post->username}</h5>
-                        </div>
-                    </a>
+                    </div>
+                </a>
                         <p class="ubicacion"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                         <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                         <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                       </svg>
                       {$post->ubicacion}</p>
-                <div class="contenedorPosteo">
-                    <img class="imgPosteo" src='{$post->media}'/>
-                </div>
+
+
+
+                      <button type="button" class="btn-ModalHome" data-toggle="modal" data-target="#modalePostHome{$post->post_id}">
+                            <div class="contenedorPosteo">
+                                <img class="imgPosteo" src='{$post->media}'/>
+                            </div>
+                       </button>
+
+                       <div class="modal fade modalHomePost" id="modalePostHome{$post->post_id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                       <div class="modal-dialog dialog modal-xl" role="document">
+                       <div class="modal-content modalContentHomePost">
+                        <div class="modal-body">
+                            <div class="containerModal">
+                                <div class="contenedorComentariosModal">
+                                        <img class="imgPosteoModal" src='{$post->media}'/>
+                                    </div>
+                                <div class="contenedorHeaderComModal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-titleHome" id="exampleModalLongTitle"><a href="{$post->username}">
+                                        <div class="contenedorUsuarioModal">   
+                                        <img class="postFotoPerfilModal" src="{$post->profilePhoto}"/>
+                                        <h5 class="nombreUsuarioModal">{$post->username}</h5>
+                                        </div>
+                                        </a>
+                                        <p class="ubicacionModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>
+                                        {$post->ubicacion}
+                                        </p>
+                                        </h5>
+                                    </div>
+                                    <div class="contenedorComentariosModal">
+                                        {foreach from=$comentarios item=$comentario}
+                                            {if $comentario->id_post_fk == $post->post_id}
+                                                
+                                                <div class="contenedorComentarios">                                    
+                                                            <div class="comentario-usuario"> <a href="{$comentario->user}">{$comentario->user} </a> </div>                           
+                                                            <div class="comentario-comentario">{$comentario->comment}</div>
+                                                </div>
+                                            {/if}
+                                    {/foreach}
+                                    </div>
+                                </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+
+
+
+
+
+
+
+
                 <div class="contenedorVueComentarios">
                     <div class="accionesComentarios">
                             <span>

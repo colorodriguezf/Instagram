@@ -374,7 +374,7 @@ a div {
 }
 .imgPosteo {
     width: 100%;
-    height:750px;
+    height:600px;
 }
 .contenedorImagen-Nombre-Posteo div h5 {
     font-size: 0.9rem;
@@ -393,6 +393,76 @@ div a h5 {
 }
 div a h5:hover {
     text-decoration: underline;
+}
+
+/* MODAL HOME POST */
+.modal-dialog{
+    display: flex;
+}
+.modalContentHomePost {
+    margin-left: 0 !important;
+    height:710px !important;
+    border-radius:0px !important;
+    display:flex !important;
+    width: 100%!important;
+    border: 0 !important;
+}
+.containerModal {
+    display: flex !important;
+    width: 100%;
+}
+.contenedorHeaderComModal{
+    width: 70%;
+}
+.imgPosteoModal {
+    width: 100%;
+    height:710px;
+}
+.btn-ModalHome {
+    border: none;
+}
+.modal-header {
+    margin: 0;
+    width:100%;
+    height:70px;
+    margin-bottom:30px!important;
+}
+.modal-titleHome {
+    margin-left:0 !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+.ubicacionModal {
+    margin-left: 14.5%;
+    margin-top: -1.5%;
+    color: black !important;
+}
+.contenedorUsuarioModal {
+/* margin-top:-3px !important ; */
+}
+.postFotoPerfilModal {
+    width:10%;
+    margin-left:3%;
+    margin-top: 22px !important;
+    border-radius: 50%;
+}
+
+.modalHomePost {
+    width: 100% !important;
+}
+.modal-body {
+    margin:0 !important;
+    padding: 0 !important;
+}
+.contenedorComentariosModal {
+    width: 80% !important;
+    margin: 0;
+    margin-top: 0 !important;   
+}
+
+.dialog {
+    width:77% !important; 
+    margin-top:1.7% !important;
 }
 
 
@@ -751,8 +821,5 @@ height:0;
         }
         .modal-x line{
             color:black !important;
-        }
-        .close {
-            
         }
 
