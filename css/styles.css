@@ -319,6 +319,7 @@ margin-top: 80px;
 
 
 /* ---------------------------------------------------------------------- */
+
 .contenedorHome {
     width: 68%;
     margin-bottom: 3%;
@@ -342,6 +343,8 @@ margin-top: 80px;
 .comentario-usuario {
     text-transform: lowercase;
     font-size: 14px;
+    font-family:  apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height: 18px;
 }
 .comentario-usuario a {
     color: black;
@@ -354,6 +357,8 @@ margin-top: 80px;
 .comentario-comentario {
     font-size: 14px;
     margin-left: 20px;
+    font-family:  apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height: 18px;
 }
 .tittle, .verLosComentarios {
     font-size: 14px;
@@ -406,10 +411,17 @@ div a h5:hover {
     display:flex !important;
     width: 100%!important;
     border: 0 !important;
+    border-top-right-radius:7px !important;
+    border-bottom-right-radius:7px !important;
 }
 .containerModal {
     display: flex !important;
     width: 100%;
+}
+a .contenedorUsuarioModal h5 {
+    font-size: 0.9rem;
+    margin-left: 18%; 
+    margin-top: -35px;   
 }
 .contenedorHeaderComModal{
     width: 70%;
@@ -429,16 +441,15 @@ div a h5:hover {
 }
 .modal-titleHome {
     margin-left:0 !important;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
+    font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 .ubicacionModal {
-    margin-left: 14.5%;
-    margin-top: -1.5%;
-    color: black !important;
-}
-.contenedorUsuarioModal {
-/* margin-top:-3px !important ; */
+    margin-left: 18%;
+    margin-top: -1%;
+    color: rgb(39, 39, 39);
+    font-size: 12.5px;
 }
 .postFotoPerfilModal {
     width:10%;
@@ -446,6 +457,7 @@ div a h5:hover {
     margin-top: 22px !important;
     border-radius: 50%;
 }
+
 
 .modalHomePost {
     width: 100% !important;
@@ -463,6 +475,18 @@ div a h5:hover {
 .dialog {
     width:77% !important; 
     margin-top:1.7% !important;
+}
+button.close {
+    width:30%;
+    height:30px;
+}
+button.close svg {
+    position: absolute;
+    top: 0;
+    margin-left: 20%;
+    color: rgb(255, 255, 255);
+    height: 24;
+    width: 24;
 }
 
 
