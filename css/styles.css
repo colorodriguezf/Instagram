@@ -70,6 +70,117 @@ nav {
     margin-top: -10px;
 }
 
+/* MODAL CREATE POST */
+.content-createPost {
+    margin-left: 0 !important;
+    width:960px !important;
+    height:80vh;
+    min-height: 0;
+    min-width: 0;
+}
+.dialog-createPost, .dialog-detailPost{
+    margin-top:80px !important;
+}
+.svg-create {
+    margin-left:20%;
+    margin-top:20%;
+}
+.arrastraFoto {
+    margin-top:15px;
+}
+.svg-create svg {
+    margin-left:20%;
+    margin-top:20px;
+}
+.inputSubirFoto  {
+    margin-top:15px;
+    font-size:14px;
+    font-weight:bold;
+    margin-left:5%;
+    background-color: #0095f6 !important;
+    border: 1px solid transparent;
+    border-radius:3px;
+    padding:3px;
+    color:rgb(255, 255, 255);
+}
+.pcreate {
+    font-size:20px;
+    
+}
+.header-create {
+    width:100% !important;
+    height:40px !important;
+    margin-left:10px;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+.tittle-create {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+.modal-backdrop {
+    background-color: rgba(0,0,0,.85) !important;
+    opacity:0.1;
+}
+button.close-create svg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
+.close-create {
+    position: absolute;
+    top: 0;
+    margin-left: 100%;
+    color: rgb(255, 255, 255);
+    height: 24;
+    width: 24;
+}
+.siguienteCreate {
+    margin-top: 50px;
+    width: 60%;
+    height:50px;
+    border-radius:10px;
+    border:none;
+    color: white;
+    background-color: #0095f6;
+}
+.content-detailPost {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    width:1600px !important;
+    height:79vh;
+    min-height: 0;
+    min-width: 0;
+}
+/* Modal New POST */
+.formDetailPost {
+    /* height:70vh; */
+}
+.contenedorNewPost {
+display:flex;
+height:68vh;
+
+}
+.content-detailPost .header-detail {
+    margin-bottom: 0!important;
+}
+.bodyDetail {
+    height:70vh;
+}
+.imgPrevisualizacionPost {
+    width: 100%;
+    height: 100%;
+}
+#imagePreview {
+    width:60%;
+}
+.detallesNewPost {
+    width:40%;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
 
 
 
@@ -498,6 +609,7 @@ button.close svg {
     top: 0;
     margin-top: 5%;
     position:fixed;
+    width: 20%;
 }
 .profile-card {
     display: flex;
@@ -511,7 +623,6 @@ button.close svg {
     background:none;
     width:30px;
     height:40px;
-    margin-right: 30px;
 }
 .img-sugerencia {
     width:180%;
@@ -537,6 +648,25 @@ button.close svg {
     font-size: 14px;
     color: rgba(58, 58, 58, 0.5);
     font-weight: 700;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* ABAJO SUGERENCIAS */
+.abajoSugerencias {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    width: 140%;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+.abajoSugerencias span {
+    margin-left:30px;
+}
+.abajoSugerencias ul{
+    list-style-type: square;
+
+}
+.abajoSugerencias ul li {
+    display:inline;
 }
 
 

@@ -37,6 +37,7 @@ class HomeView {
     }
 
     function formCreatePost() {
+        
         $this->smarty->display('templates/formCreatePost.tpl');
     }
 

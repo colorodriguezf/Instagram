@@ -17,7 +17,7 @@ $router->addRoute('verify', 'POST', 'UserController', 'verifyLogin');
 $router->addRoute('logout', 'GET', 'UserController', 'logout');
 
 $router->addRoute('home', 'GET', 'InstagramController', 'showHome');
-$router->addRoute('create', 'POST', 'InstagramController', 'createPost');
+
 $router->addRoute(':NOMBRE_USUARIO', 'GET', 'InstagramController', 'profile');
 
 

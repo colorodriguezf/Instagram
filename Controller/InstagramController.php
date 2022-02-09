@@ -73,13 +73,5 @@ class InstagramController {
         }
     }
 
-    function createPost($params = null) {
-        $logueado = $this->authHelper->checkLogedIn();
-        if($logueado) {
-            $this->view->formCreatePost();
-        }
-        else {
-            $this->view->showLoginORRegister();
-        }
-    }
+   
 }

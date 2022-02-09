@@ -9,6 +9,7 @@
 
 
 <div class="contenedorHome">
+
     <div class="historias">
             <div class="historias-container">
                 <button class="historia">
@@ -49,6 +50,7 @@
         
     </div>
     {foreach from=$posteos item=$post}
+        
             <div class="contenedorImagen-Nombre-Posteo">   
                  <a href="{$post->username}">
                     <div>   
@@ -64,11 +66,11 @@
 
 
 
-                      <button type="button" class="btn-ModalHome" data-toggle="modal" data-target="#modalePostHome{$post->post_id}">
+                      <a href="p/ACA VA FOTO HASEHADA/" class="btn-ModalHome" data-toggle="modal" data-target="#modalePostHome{$post->post_id}">
                             <div class="contenedorPosteo">
                                 <img class="imgPosteo" src='{$post->media}'/>
                             </div>
-                       </button>
+                       </a>
 
                        <div class="modal fade modalHomePost" id="modalePostHome{$post->post_id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                        <div class="modal-dialog dialog modal-xl" role="document">
@@ -229,7 +231,22 @@
             </div>
                 <button class="cambiarCuenta">Seguir</button>
             </div>
-            
+            <div class="abajoSugerencias">
+                <ul>
+                <li>Informacion •</li>
+                <li>Ayuda •</li>
+                <li>Prensa •</li>
+                <li>Api •</li>
+                <li>Empleo •</li>
+                <li>Privacidad •</li>
+                <li>Condiciones •</li>
+                <li>Ubicaciones •</li>
+                <li>Cuentas descacadas •</li>
+                <li>Hashtags •</li>
+                <li>Idioma •</li>
+                </ul>
+                <span class="DINPA">© 2022 Instagram from Meta</span>
+            </div>
         </div>
     </div>
     

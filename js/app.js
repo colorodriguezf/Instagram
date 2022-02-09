@@ -63,3 +63,43 @@ stories.forEach(story => {
         story.classList.add('active');
     });
 });
+
+
+//Previsualizacion de la img antes de subir un POST: 
+
+document.getElementById("imageToUpload").onchange = function(e) {
+// Creamos el objeto de la clase FileReader
+let reader = new FileReader();
+
+// Leemos el archivo subido y se lo pasamos a nuestro fileReader
+reader.readAsDataURL(e.target.files[0]);
+
+ // Le decimos que cuando este listo ejecute el código interno
+ reader.onload = function(){
+    let preview = document.getElementById('imagePreview'),
+            image = document.createElement('img');
+
+    image.src = reader.result;
+    image.classList.add('imgPrevisualizacionPost');
+
+    preview.innerHTML = '';
+    preview.append(image);
+  };
+}
+
+
+// (function() {
+//     function filePreview(input) {
+//         if(input.files && input.files[0]) {
+//             var reader = new FileReader();
+
+//             reader.onload = function(e) {
+//                 $('#imagePreview').html("<img src='"+e.target.result+"'/>");
+//             }
+//             reader.readAsDataURL(input.files[o]);
+//         }
+//     }
+//     $('#imageToUpload').change(function() {
+//         filePreview(this);
+//     });
+// } )();
