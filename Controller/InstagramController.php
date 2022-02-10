@@ -26,7 +26,25 @@ class InstagramController {
         $comentarios= $this->model->comentarios();
         $fecha = date("Y-m-d H:i");
         if ($logueado) {
-            $this->view->showHome($_SESSION['foto_perfil'], $_SESSION['nombre_usuario'],$_SESSION['nickname'], $posteos, $comentarios, $fecha);
+            $this->view->showHome($_SESSION['foto_perfil'], $_SESSION['nombre_usuario'],$_SESSION['nickname'], $_SESSION['user_id'], $posteos, $comentarios, $fecha);
+        }
+        else {
+            $this->view->showLoginLocation();
+        }
+    }
+
+    function publicPost($params=null) {
+        $logueado = $this->authHelper->checkLogedIn();
+        if ($logueado) {
+            $a = 3;
+            if(!empty($_POST['user_id']) && !empty($_POST['foto'])) {
+                    $user_id = $_POST['user_id'];
+                    $pieFoto = $_POST['pieFoto'];
+                    $ubicacion = $_POST['ubicacion'];
+                    $foto = $_POST['foto'];
+                }
+            $this->model->createPost($user_id, $pieFoto,  $foto, $ubicacion);
+            $this->view->showHomeLocation();
         }
         else {
             $this->view->showLoginLocation();

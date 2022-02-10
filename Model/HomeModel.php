@@ -8,7 +8,7 @@ class HomeModel {
     }
 
     function todosLosPosteos() {
-        $sentencia= $this->db->prepare('SELECT * FROM posts JOIN users ON posts.user_id = users.user_id ');
+        $sentencia= $this->db->prepare('SELECT * FROM posts JOIN users ON posts.user_id = users.user_id ORDER BY post_id DESC ');
         $sentencia->execute();
         $posteos = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $posteos;
@@ -47,4 +47,19 @@ class HomeModel {
         $seguidores = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $seguidores;
     }
+    //  FUNCIONES HACER POSTEO
+        function createPost($user_id, $pieFoto, $foto = null, $ubicacion) {
+            $pathImg = null;
+            if ($foto) {
+                $pathImg = $this->uploadImage($foto);
+                $sentencia = $this->db->prepare("INSERT INTO posts(user_id, title, media, ubicacion) VALUES(?,?,?,?)");
+                $sentencia->execute(array($user_id, $pieFoto, $pathImg, $ubicacion));
+            }
+        }
+            private function uploadImage($foto_perfil) {
+                $target = 'img/fotosPost/' . uniqid() . '.jpg';
+                move_uploaded_file($foto_perfil, $target);
+                return $target;
+            }
 }
+

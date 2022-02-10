@@ -12,10 +12,11 @@ class HomeView {
         $this->smarty->display('templates/showLoginORRegister.tpl');
     }
 
-    function showHome($foto_perfil="", $nombre_usuario="",$nickname="", $posteos, $comentarios, $fecha) {
+    function showHome($foto_perfil="", $nombre_usuario="",$nickname="", $user_id, $posteos, $comentarios, $fecha) {
         $this->smarty->assign('foto_perfil', $foto_perfil);
         $this->smarty->assign('nombre_usuario', $nombre_usuario);
         $this->smarty->assign('nickname', $nickname);
+        $this->smarty->assign('user_id', $user_id);
         $this->smarty->assign('posteos', $posteos);
         $this->smarty->assign('comentarios', $comentarios);
         $this->smarty->assign('fecha', $fecha);

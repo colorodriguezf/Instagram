@@ -35,7 +35,7 @@
                                         {if $misSeguidores != null}
                                             {foreach from=$misSeguidores item=$seguidor}
                                                 <ul>
-                                                    <li><a href="{$seguidor->seguidor}" class="">{$seguidor->seguidor}</a></li>
+                                                   <img  class="fotoPerfilSeguidores" src="{$seguidor->fotoPerfil}" <li><a href="{$seguidor->seguidor}" class="listaSeguidor">{$seguidor->seguidor}</a></li>
                                                 </ul>
                                             {/foreach}
                                             {else}

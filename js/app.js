@@ -81,25 +81,17 @@ reader.readAsDataURL(e.target.files[0]);
 
     image.src = reader.result;
     image.classList.add('imgPrevisualizacionPost');
-
+    
     preview.innerHTML = '';
     preview.append(image);
   };
 }
 
 
-// (function() {
-//     function filePreview(input) {
-//         if(input.files && input.files[0]) {
-//             var reader = new FileReader();
-
-//             reader.onload = function(e) {
-//                 $('#imagePreview').html("<img src='"+e.target.result+"'/>");
-//             }
-//             reader.readAsDataURL(input.files[o]);
-//         }
-//     }
-//     $('#imageToUpload').change(function() {
-//         filePreview(this);
-//     });
-// } )();
+document.querySelector(".siguienteCreate").addEventListener("click", valor);
+function valor () {
+    let imagen = document.getElementById("imageToUpload").value;
+    console.log(imagen);
+    let foto = document.getElementById("fotoPost");
+    foto.value=imagen;
+}
